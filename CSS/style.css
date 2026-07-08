@@ -1,0 +1,16 @@
+:root{
+    --main-color: #CBFE1C;
+}
+body{
+    font-family: "Chakra Petch", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Days One", sans-serif;
+}
+
+.bg-main{
+    background-color: var(--main-color);
+}
+.text-main{
+    color: var(--main-color);
+}
