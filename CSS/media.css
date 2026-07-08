@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px){
+    #home .container{
+        padding-top: 60px;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-nav{
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+    #home .container{
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    .hero-text h1{
+        font-size: 50px;
+    }
+    #home{
+        text-align: center;
+        padding-bottom: 46px;
+    }
+    #home .hero-text p{
+        margin: 20px auto;
+    }
+    #home .btn-shine{
+        margin-right: 10px;
+    }
+    #home button{
+        margin-block: 20px;
+    }
+    .hero-badge{
+        left: -36px;
+    }
+}
+
+@media screen and (max-width: 648px){
+    #home button{
+        display: block;
+        width: 100%;
+    }
+    .hero-badge{
+        left: -10px;
+    }
+}

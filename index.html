@@ -11,14 +11,75 @@
     <link rel="stylesheet" href='css/media.css'>
 </head>
 <body>
-    <section class="home" id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
         <div class="container">
-            <div class="row">
-                
+            <a class="navbar-brand d-flex align-items-center gap-2 text-main" href="#">
+                <i class="fa-solid fa-gamepad"></i>
+                <span class="fw-bold">GameArena</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 my-3 my-lg-0 gap-3 gap-lg-0 py-3 py-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#ourGames">OUR GAMES</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#whatWeDo">What We Do</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#ourTeam">Our Team</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#contactUs">Contact Us</a>
+                </li>
+            </ul>
+
+            <ul class="nav-icon list-unstyled d-flex flex-column align-items-start flex-lg-row gap-3 align-items-lg-center mb-0 py-3 py-lg-0">
+                <li class="d-flex align-items-center gap-2"><i class="fa-regular fa-bell fa-lg"></i><span class="d-lg-none">Notification</span></li>
+                <li class="d-flex align-items-center gap-2"><i class="fa-regular fa-message fa-lg"></i><span class="d-lg-none">Message</span></li>
+                <li class="w-100"><button class="bg-main py-2 px-4 rounded-3 btn-shine fw-bold w-100">Sign In</button></li>
+            </ul>
             </div>
         </div>
-    </section>
-    
+    </nav>
+
+    <!-- Home -->
+     <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>THE ULTIMATE <span class="text-main"> GAMING</span> EXPERIENCE</h1>
+                        <p class="py-2 max-w-576">Join millions of gamers worldwide in the most competitive eSports 
+                            tournaments. Experience next-level gaming with cutting-edge technology and 
+                            endless possibilities.</p>
+                        <button class="btn-shine bg-main px-4 py-3 rounded-2 fw-bold border-0 me-lg-3">Start Gaming Now</button>
+                        <button class="btn-shine text-main px-4 py-3 rounded-2 fw-bold me-lg-3 btn-custom">Watch Tournaments</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img position-relative">
+                        <img src="Images/hero-img.png" alt="hero-img" class="w-100">
+                        <div class="hero-badge position-absolute px-4 py-3 d-flex align-items-center gap-3 border border-secondary rounded-3">
+                            <i class="fa-solid fa-trophy text-main fa-lg"></i>
+                            <div>
+                                <p class="mb-0 fs-12 text-gray fw-semibold">Active Players</p>
+                                <p class="mb-0 fw-bold text-white fs-5">2.5M+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     
 
 
  <script src="js/bootstrap.bundle.js"></script>
