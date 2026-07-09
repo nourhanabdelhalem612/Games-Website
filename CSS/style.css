@@ -11,6 +11,15 @@ h1,h2,h3,h4,h5,h6{
 .fs-12{
     font-size: 12px;
 }
+.fs-14{
+    font-size: 14px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-24{
+    font-size: 24px;
+}
 .text-gray{
     color: oklch(0.707 0.022 261.325);
 }
@@ -78,6 +87,13 @@ p{
 .heading{
     margin-bottom: 20px;
 }
+html{
+    scroll-padding-top: 75px;
+}
+::selection{
+    background-color: var(--main-color);
+    color: black;
+}
 
 /* Navbar */
 .nav-item .nav-link,
@@ -89,6 +105,9 @@ p{
 .nav-item .nav-link:hover,
 .nav-icon li:hover i,
 .nav-icon li:hover span{
+    color: var(--main-color);
+}
+.navbar-nav .nav-link.active{
     color: var(--main-color);
 }
 
@@ -118,10 +137,14 @@ p{
     background-color: var(--main-color);
     color: black !important;
 }
+.hero-img{
+    background: linear-gradient(135deg, var(--main-color), #09DF72);
+    padding: 4px;
+    border-radius: 15px;
+}
 .hero-img img{
     height: 400px;
     object-fit: cover;
-    border: 5px solid var(--main-color);
     border-radius: 15px;
 }
 .hero-badge{
@@ -272,4 +295,160 @@ p{
 #whatWeDo .img-card::after,
 #whatWeDo .img-card::before{
     display: none;
+}
+#whatWeDo{
+    position: relative;
+}
+#whatWeDo::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--main-color)20%,var(--main-color)80%, transparent);
+    box-shadow: 0 0 10px var(--main-color), 0 0 20px #cbfe1c4d;
+}
+
+/* Sponsors */
+#sponsors,
+.scroll-row{
+    overflow: hidden;
+}
+.scroll-content{
+    display: flex;
+    margin-bottom: 30px;
+    animation: scroll-left 10s linear infinite;
+}
+.scroll-content.reverse{
+    animation: scroll-right 10s linear infinite;
+}
+.logo-box{
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin-inline: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.logo-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes scroll-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-30%);
+    }
+}
+@keyframes scroll-right{
+    0%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.bg-radial{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 100%;
+    background: radial-gradient(var(--main-color)0%, transparent 70%);
+}
+
+/* Our Team */
+.team-card{
+    height: 350px;
+    cursor: pointer;
+}
+.team-card img{
+    height: 100%;
+    object-fit: cover;
+}
+.rotate-90{
+    transform: rotate(90deg);
+}
+.team-layer{
+    inset: 0;
+    backdrop-filter: grayscale(100%);
+    z-index: 1;
+    transform: translateY(0%);
+    transition: 0.5s all;
+}
+.team-card:hover .team-layer{
+    transform: translateY(-100%);
+}
+
+/* Contact Us */
+#contactUs{
+    background-color: #0F1624;
+}
+.bg-custom{
+    background-color: #1E2939;
+}
+.content-icon{
+    width: 65px;
+    height: 65px;
+}
+.community-icon{
+    width: 50px;
+    height: 50px;
+}
+.community-card{
+    background: linear-gradient(to right, var(--main-color), #1DE071);
+}
+.p-8{
+    padding: calc(.25rem * 8);
+}
+#contactUs input,
+#contactUs select,
+#contactUs textarea{
+    background-color: #364153;
+    border: 2px solid #4a5565;
+}
+#contactUs label{
+    color: #d1d5db;
+    font-size: 14px;
+    font-weight: 700;
+}
+#contactUs input::placeholder,
+#contactUs textarea::placeholder{
+    color: #89909A;
+}
+.form-select{
+    --bs-form-select-bg-img: url(../Images/angle-down-solid.png);
+}
+#contactUs input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+}
+#contactUs input[type='checkbox']:checked{
+    outline: 3px solid var(--main-color);
+}
+#contactUs .form-control:focus,
+#contactUs .form-select:focus{
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+#contactUs textarea{
+    resize: none;
+}
+
+/* Footer */
+.upper-footer{
+    border-bottom: 1px solid #1E2939;
+    padding-bottom: 16px;
+}
+footer a{
+    transition: 0.3s all;
+}
+footer a:hover{
+    color: var(--main-color) !important;
 }
