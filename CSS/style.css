@@ -96,6 +96,17 @@ html{
 }
 
 /* Navbar */
+.navbar-toggler{
+    border: none;
+    border-radius: 0;
+    color: white;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler:hover{
+    color: var(--main-color) !important;
+}
 .nav-item .nav-link,
 .nav-icon li{
     color: white;
