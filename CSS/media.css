@@ -34,6 +34,10 @@
     .hero-badge{
         left: -36px;
     }
+    .heading h2,
+    .heading p{
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 648px){
@@ -43,5 +47,15 @@
     }
     .hero-badge{
         left: -10px;
+    }
+    .btn-control{
+        flex-wrap: wrap;
+    }
+    .btn-control .btn-custom{
+        width: 100%;
+    }
+    .heading h2,
+    .heading p{
+        font-size: 21px;
     }
 }

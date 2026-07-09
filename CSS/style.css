@@ -3,6 +3,7 @@
 }
 body{
     font-family: "Chakra Petch", sans-serif;
+    background-color: #0B0E13;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Days One", sans-serif;
@@ -42,6 +43,40 @@ p{
 }
 .btn-shine:hover{
     background-color: #a4ce1a;
+}
+.heading > span{
+    letter-spacing: 2px;
+    position: relative;
+}
+.heading h2{
+    font-size: 48px;
+}
+.heading > span::before{
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--main-color));
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 120%;
+}
+.heading > span::after{
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(to left, transparent, var(--main-color));
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120%;
+}
+.heading p{
+    font-size: 48px;
+    font-weight: 700;
+}
+.heading{
+    margin-bottom: 20px;
 }
 
 /* Navbar */
@@ -96,4 +131,145 @@ p{
 }
 .max-w-576{
     max-width: 576px;
+}
+/* Our Games */
+.game-card{
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.game-card:hover{
+    border-color: var(--main-color);
+}
+.game-card img{
+ aspect-ratio: 4/3;
+ object-fit: cover;
+ transition: 0.3s all;
+}
+.game-card:hover img{
+    transform: scale(1.1);
+}
+.game-card .overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient(to top, var(--main-color), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    transform: translateY(100%);
+    transition: 0.3s all;
+}
+.game-card:hover .overlay{
+    transform: translateY(0%);
+}
+.game-card .tags{
+    position: absolute;
+    left: 16px;
+    top: -40px;
+    display: flex;
+    gap: 10px;
+    transition: 0.3s all;
+}
+.game-card .tags span{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.game-card:hover .tags{
+    top: 16px;
+}
+.carousel-control-next,
+.carousel-control-prev{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: 0.3s all;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* What We Do */
+#whatWeDo .inner-card{
+    background-color: #1A1A1A;
+    border: 1px solid #1e2939;
+    border-radius: 20px;
+    aspect-ratio: 1;
+    transition: 0.3s all;
+    position: relative;
+    overflow: hidden;
+}
+#whatWeDo .inner-card .icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #1e2939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    transition: 0.3s all;
+}
+#whatWeDo .inner-card:hover{
+    border-color: var(--main-color);
+}
+#whatWeDo .inner-card:hover .icon{
+    background-color: var(--main-color);
+    color: black;
+}
+#whatWeDo .inner-card::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid var(--main-color);
+    border-top: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    transform: rotate(45deg);
+    transition: 0.3s all;
+}
+#whatWeDo .inner-card:hover::after{
+    bottom: 3px;
+    right: 3px;
+}
+#whatWeDo .inner-card::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-top: 18px solid transparent;
+    border-right: 18px solid var(--main-color);
+    border-bottom: 18px solid transparent;
+    transform: rotate(45deg);
+    transition: 0.3s all;
+}
+#whatWeDo .inner-card:hover::before{
+    top: 3px;
+    left: 3px;
+}
+#whatWeDo .img-card::after,
+#whatWeDo .img-card::before{
+    display: none;
 }
